@@ -40,7 +40,7 @@ const Header = () => {
     href: "#contact"
   }];
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/90 backdrop-blur-md shadow-md py-2" : "bg-transparent py-4"}`}>
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center py-0 px-[19px]">
         <div className="flex items-center mx-0 my-[9px]">
           <a href="#" className="flex items-center my-[5px] py-0 mx-0 px-0">
             <img src="/lovable-uploads/1c8d0a11-c7c5-4c57-8e17-dcff39531b90.png" alt="Treezor.ai Logo" className="h-12 md:h-14" />
