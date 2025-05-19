@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import { WhatsApp } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -133,7 +133,7 @@ const ContactSection = () => {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-4 rounded-md hover:bg-green-600 transition-colors shadow-md"
                 >
-                  <WhatsApp size={24} />
+                  <MessageSquare size={24} />
                   <span>Falar com a Treezor agora</span>
                 </a>
                 
