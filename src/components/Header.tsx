@@ -44,11 +44,11 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <a href="#" className="flex items-center gap-2">
+          <a href="#" className="flex items-center">
             <img 
-              src="/lovable-uploads/bb3fcd58-2daf-4ed0-82b6-96751e0b7370.png" 
+              src="/lovable-uploads/1c8d0a11-c7c5-4c57-8e17-dcff39531b90.png" 
               alt="Treezor.ai Logo" 
-              className="h-10"
+              className="h-12 md:h-14"
             />
           </a>
         </div>
@@ -69,7 +69,7 @@ const Header = () => {
             className="bg-treezor-purple text-white px-4 py-2 rounded-md transition-all hover:bg-treezor-purple/90 shadow-md flex items-center gap-2"
           >
             <img 
-              src="/lovable-uploads/1d11a07c-3c10-4cd6-9905-83379f3bbe5b.png" 
+              src="/lovable-uploads/af6057ea-e2de-4de5-b6b0-bfe2408786bd.png" 
               alt="Treezor Icon" 
               className="h-5 w-5"
             />
@@ -103,9 +103,9 @@ const Header = () => {
           
           <div className="mb-6">
             <img 
-              src="/lovable-uploads/bb3fcd58-2daf-4ed0-82b6-96751e0b7370.png" 
+              src="/lovable-uploads/1c8d0a11-c7c5-4c57-8e17-dcff39531b90.png" 
               alt="Treezor.ai Logo" 
-              className="h-12"
+              className="h-14"
             />
           </div>
           
@@ -126,7 +126,7 @@ const Header = () => {
             onClick={closeMobileMenu}
           >
             <img 
-              src="/lovable-uploads/1d11a07c-3c10-4cd6-9905-83379f3bbe5b.png" 
+              src="/lovable-uploads/af6057ea-e2de-4de5-b6b0-bfe2408786bd.png" 
               alt="Treezor Icon" 
               className="h-6 w-6"
             />

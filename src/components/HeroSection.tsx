@@ -25,6 +25,11 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="#contact" className="btn-primary">
+              <img 
+                src="/lovable-uploads/af6057ea-e2de-4de5-b6b0-bfe2408786bd.png" 
+                alt="Treezor Icon" 
+                className="h-5 w-5"
+              />
               Vamos conversar
             </a>
             <a href="#problems" className="btn-outline">
@@ -34,24 +39,11 @@ const HeroSection = () => {
         </div>
         
         <div className="lg:w-1/2 flex justify-center relative">
-          <div className="relative w-full max-w-md">
-            <div className="absolute inset-0 bg-treezor-purple/20 rounded-2xl blur-3xl transform -rotate-6"></div>
-            <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden animate-float">
-              <div className="bg-gradient-to-br from-treezor-purple to-treezor-purple/80 p-6">
-                <div className="h-6 w-24 bg-white/20 rounded-full mb-4"></div>
-                <div className="h-8 w-48 bg-white/30 rounded-full"></div>
-              </div>
-              <div className="p-6 space-y-4">
-                <div className="h-6 w-3/4 bg-gray-200 rounded-full"></div>
-                <div className="h-6 w-1/2 bg-gray-200 rounded-full"></div>
-                <div className="h-6 w-5/6 bg-gray-200 rounded-full"></div>
-                <div className="flex space-x-4 mt-8">
-                  <div className="h-10 w-20 bg-treezor-purple/10 rounded-md"></div>
-                  <div className="h-10 w-20 bg-treezor-purple rounded-md"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <img 
+            src="/lovable-uploads/af6057ea-e2de-4de5-b6b0-bfe2408786bd.png" 
+            alt="Treezor.ai Icon" 
+            className="w-full max-w-md animate-float"
+          />
         </div>
       </div>
       
