@@ -17,26 +17,54 @@ const ContactSection = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Send email using a no-code email service like FormSubmit
+      const response = await fetch("https://formsubmit.co/ajax/treezor.ai@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: "Novo contato do site Treezor.ai",
+        }),
+      });
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        toast({
+          title: "Mensagem enviada com sucesso!",
+          description: "Entraremos em contato em breve.",
+          duration: 5000,
+        });
+        
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
       toast({
-        title: "Mensagem enviada com sucesso!",
-        description: "Entraremos em contato em breve.",
+        title: "Erro ao enviar mensagem",
+        description: "Por favor, tente novamente ou entre em contato por WhatsApp.",
+        variant: "destructive",
         duration: 5000,
       });
-      
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
-      
+      console.error("Form submission error:", error);
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
@@ -128,7 +156,7 @@ const ContactSection = () => {
                 </p>
                 
                 <a 
-                  href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20soluções%20da%20Treezor.ai" 
+                  href="https://wa.me/5531975019782?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20soluções%20da%20Treezor.ai" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-4 rounded-md hover:bg-green-600 transition-colors shadow-md"
@@ -142,15 +170,15 @@ const ContactSection = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-treezor-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <a href="mailto:contato@treezor.ai" className="hover:text-treezor-purple transition-colors">
-                      contato@treezor.ai
+                    <a href="mailto:treezor.ai@gmail.com" className="hover:text-treezor-purple transition-colors">
+                      treezor.ai@gmail.com
                     </a>
                   </div>
                   <div className="flex items-center gap-3 text-gray-700">
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-treezor-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                     </svg>
-                    <span>(11) 99999-9999</span>
+                    <span>(31) 97501-9782</span>
                   </div>
                 </div>
               </div>

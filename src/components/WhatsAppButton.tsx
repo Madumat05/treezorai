@@ -2,7 +2,7 @@
 import { MessageSquare } from "lucide-react";
 
 const WhatsAppButton = () => {
-  const phoneNumber = "5511999999999"; // Replace with your actual WhatsApp number
+  const phoneNumber = "5531975019782"; // Updated with your real number
   const message = encodeURIComponent("Olá! Gostaria de saber mais sobre as soluções da Treezor.ai");
   
   return (
