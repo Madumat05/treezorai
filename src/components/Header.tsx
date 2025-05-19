@@ -44,11 +44,12 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <a href="#" className="text-2xl font-bold text-treezor-purple flex items-center gap-2">
-            <span className="bg-treezor-purple text-white p-1 rounded">
-              T
-            </span>
-            Treezor<span className="text-black">.ai</span>
+          <a href="#" className="flex items-center gap-2">
+            <img 
+              src="/lovable-uploads/bb3fcd58-2daf-4ed0-82b6-96751e0b7370.png" 
+              alt="Treezor.ai Logo" 
+              className="h-10"
+            />
           </a>
         </div>
 
@@ -65,8 +66,13 @@ const Header = () => {
           ))}
           <a 
             href="#contact" 
-            className="bg-treezor-purple text-white px-4 py-2 rounded-md transition-all hover:bg-treezor-purple/90 shadow-md"
+            className="bg-treezor-purple text-white px-4 py-2 rounded-md transition-all hover:bg-treezor-purple/90 shadow-md flex items-center gap-2"
           >
+            <img 
+              src="/lovable-uploads/1d11a07c-3c10-4cd6-9905-83379f3bbe5b.png" 
+              alt="Treezor Icon" 
+              className="h-5 w-5"
+            />
             Vamos conversar
           </a>
         </nav>
@@ -95,6 +101,14 @@ const Header = () => {
             ✕
           </button>
           
+          <div className="mb-6">
+            <img 
+              src="/lovable-uploads/bb3fcd58-2daf-4ed0-82b6-96751e0b7370.png" 
+              alt="Treezor.ai Logo" 
+              className="h-12"
+            />
+          </div>
+          
           {menuItems.map((item) => (
             <a
               key={item.name}
@@ -108,9 +122,14 @@ const Header = () => {
           
           <a 
             href="#contact" 
-            className="bg-treezor-purple text-white px-6 py-3 rounded-md text-lg transition-all hover:bg-treezor-purple/90 shadow-md"
+            className="bg-treezor-purple text-white px-6 py-3 rounded-md text-lg transition-all hover:bg-treezor-purple/90 shadow-md flex items-center gap-2"
             onClick={closeMobileMenu}
           >
+            <img 
+              src="/lovable-uploads/1d11a07c-3c10-4cd6-9905-83379f3bbe5b.png" 
+              alt="Treezor Icon" 
+              className="h-6 w-6"
+            />
             Vamos conversar
           </a>
         </div>
